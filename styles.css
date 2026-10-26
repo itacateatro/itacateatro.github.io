@@ -26,17 +26,17 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 24%;
+    left: 39%;
     right: 0;
     background: url('assets/teatro-home-ros-guild.webp') center center / cover no-repeat;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 26%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 26%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 27%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 27%);
     pointer-events: none;
     z-index: 0;
   }
   .hero-home .hero-scrim {
     z-index: 1;
-    background: linear-gradient(90deg,#000 0%,#000 19%,rgba(0,0,0,.96) 27%,rgba(0,0,0,.56) 37%,transparent 54%);
+    background: linear-gradient(90deg,#000 0%,#000 30%,rgba(0,0,0,.97) 39%,rgba(0,0,0,.7) 48%,transparent 63%);
   }
   .hero-home .hero-content { z-index: 2; }
 }
