@@ -14,3 +14,29 @@
 
 /* Fit the longer home-section heading in the desktop school column. */
 @media(min-width:901px){.landing-column h2{font-size:clamp(30px,2.8vw,51px);line-height:1.08;min-height:1.08em}.landing-column .landing-desc{min-height:56px}}
+
+
+/* HERO ITACA: subjects to the right, deep-black text area on the left */
+@media (min-width: 901px) {
+  .hero-home {
+    background: #000;
+  }
+  .hero-home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24%;
+    right: 0;
+    background: url('assets/teatro-home-ros-guild.webp') center center / cover no-repeat;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 26%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 26%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-home .hero-scrim {
+    z-index: 1;
+    background: linear-gradient(90deg,#000 0%,#000 19%,rgba(0,0,0,.96) 27%,rgba(0,0,0,.56) 37%,transparent 54%);
+  }
+  .hero-home .hero-content { z-index: 2; }
+}
