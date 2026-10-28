@@ -182,9 +182,9 @@
 /* Upright phones: crop the photograph before the actors' faces, leaving just
    the outstretched arm and curtain beside the three-line gold heading. */
 @media (max-width:600px) and (orientation:portrait){
-  .hero-home{min-height:560px}
-  .hero-home .hero-stage-photo{top:0;left:35vw;width:215vw}
-  .hero-home .hero-content{margin-left:6vw;width:59vw;padding:70px 0 42px}
+  .hero-home{min-height:0}
+  .hero-home .hero-stage-photo{top:0;left:50vw;width:215vw}
+  .hero-home .hero-content{margin-left:6vw;width:59vw;padding:52px 0 22px}
   .hero-home h1{font-size:clamp(32px,8.5vw,41px);line-height:1.06}
   .hero-home p{font-size:15px;line-height:1.39;max-width:100%;margin-top:22px}
 }
