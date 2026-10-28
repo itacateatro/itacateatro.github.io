@@ -16,32 +16,6 @@
 @media(min-width:901px){.landing-column h2{font-size:clamp(30px,2.8vw,51px);line-height:1.08;min-height:1.08em}.landing-column .landing-desc{min-height:56px}}
 
 
-/* HERO ITACA: subjects to the right, deep-black text area on the left */
-@media (min-width: 901px) {
-  .hero-home {
-    background: #000;
-  }
-  .hero-home::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 39%;
-    right: 0;
-    background: url('assets/teatro-home-ros-guild.webp') center center / cover no-repeat;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 27%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 27%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .hero-home .hero-scrim {
-    z-index: 1;
-    background: linear-gradient(90deg,#000 0%,#000 30%,rgba(0,0,0,.97) 39%,rgba(0,0,0,.7) 48%,transparent 63%);
-  }
-  .hero-home .hero-content { z-index: 2; }
-}
-
-
 /* Schede dei membri: componenti riutilizzabili per attori, tecnici e collaboratori. */
 .members-intro{margin:0 0 38px}
 .members-intro h2{font:400 clamp(34px,4vw,53px)/1.08 var(--serif);letter-spacing:-.035em;color:var(--red);margin-top:13px}
@@ -172,4 +146,45 @@
 @media(max-width:600px) and (orientation:portrait){
   .landing-quote-kavafis .kavafis-line{display:block}
   .landing-quote-kavafis blockquote{white-space:normal}
+}
+
+
+/* Home 2026: the actual original stage photograph. The red cloth is the visual
+   curtain between the black-backed golden type and the three performers. */
+.hero-home{background:#000}
+.hero-home::before,.hero-home::after,.hero-home .hero-scrim{display:none}
+.hero-home .hero-stage-photo{
+  display:block;
+  position:absolute;
+  z-index:0;
+  top:-30px;
+  left:48vw;
+  width:74vw;
+  max-width:none;
+  height:auto;
+  pointer-events:none;
+}
+.hero-home .hero-content{position:relative;z-index:1}
+.hero-home h1{color:#f4bd66}
+.hero-home p{color:#f3c880}
+.hero-home .little-line{background:#f1b85c;opacity:1}
+
+/* Horizontal phones: keep all three performers to the right of the red cloth
+   and the gold title and copy fully to its left. */
+@media (orientation:landscape) and (max-height:600px) and (max-width:1200px){
+  .hero-home{min-height:445px}
+  .hero-home .hero-stage-photo{top:-15px;left:43vw;width:95vw}
+  .hero-home .hero-content{margin-left:5vw;width:52vw;padding:70px 0 32px}
+  .hero-home h1{font-size:clamp(38px,5.4vw,52px);line-height:1}
+  .hero-home p{font-size:16px;line-height:1.35;margin-top:20px;max-width:100%}
+}
+
+/* Upright phones: crop the photograph before the actors' faces, leaving just
+   the outstretched arm and curtain beside the three-line gold heading. */
+@media (max-width:600px) and (orientation:portrait){
+  .hero-home{min-height:560px}
+  .hero-home .hero-stage-photo{top:0;left:35vw;width:215vw}
+  .hero-home .hero-content{margin-left:6vw;width:59vw;padding:70px 0 42px}
+  .hero-home h1{font-size:clamp(32px,8.5vw,41px);line-height:1.06}
+  .hero-home p{font-size:15px;line-height:1.39;max-width:100%;margin-top:22px}
 }
