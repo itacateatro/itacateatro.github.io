@@ -76,3 +76,37 @@
 .members-footnote{margin-top:26px;color:#80756b;font:italic 16px/1.4 var(--serif)}
 @media(max-width:760px){.member-card{grid-template-columns:1fr}.member-art{min-height:235px;padding:22px}.member-monogram{font-size:94px}.member-info{padding:35px 25px 38px}.member-info h3{font-size:47px}.members-intro>p{font-size:17px}.members-grid{grid-template-columns:1fr}}
 @media(max-width:420px){.member-actions{flex-direction:column}.member-cv-link,.member-download{width:100%}.member-monogram{font-size:81px}.member-info h3{font-size:42px}}
+
+
+/* Team profiles: reusable member-card system and four editorial groups */
+.members-page{padding-top:51px}
+.team-section{margin:0 0 74px}
+.team-section-head{display:flex;align-items:baseline;gap:17px;margin-bottom:27px;position:relative}
+.team-section-index{font:600 12px/1.2 var(--sans);letter-spacing:.16em;color:#ad844e}
+.team-section-head h2{font:400 clamp(34px,4vw,55px)/1.05 var(--serif);letter-spacing:-.04em;color:#ac0728;white-space:nowrap}
+.team-section-rule{height:1px;background:linear-gradient(90deg,#d4b98c,#e7ded4);align-self:center;flex:1;margin-left:14px}
+.team-members-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.team-card{display:flex;flex-direction:column;background:#fff;border:1px solid #e9e1d7;box-shadow:0 12px 30px rgba(52,22,20,.075);min-width:0;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.team-card:hover{transform:translateY(-4px);box-shadow:0 21px 34px rgba(52,22,20,.115)}
+.team-card-art{min-height:142px;background:linear-gradient(125deg,#600817 0%,#a70c2a 58%,#c54a34 100%);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;isolation:isolate}
+.team-card-art:before{content:"";position:absolute;width:240px;height:190px;border:1px solid rgba(255,255,255,.2);border-radius:50%;transform:rotate(-24deg);left:-75px;top:-81px}
+.team-card-art:after{content:"";position:absolute;right:-36px;bottom:-60px;width:155px;height:155px;border:1px solid rgba(255,207,151,.38);border-radius:50%}
+.team-card:nth-child(3n+2) .team-card-art{background:linear-gradient(125deg,#751122,#ae2139 58%,#b76e40 100%)}
+.team-card:nth-child(3n+3) .team-card-art{background:linear-gradient(125deg,#4f0717,#91142b 60%,#ad3a2a)}
+.team-card-mark{font:400 82px/1 var(--serif);letter-spacing:-.07em;color:#fff7ec;position:relative;z-index:1;text-shadow:0 6px 25px rgba(25,0,0,.14)}
+.team-card-mark i{font-style:normal;color:#f0b969}
+.team-card-brand{position:absolute;right:17px;bottom:12px;color:#f0d8c3;font:700 10px/1 var(--sans);letter-spacing:.17em}
+.team-card-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;min-height:138px}
+.team-card-body h3{font:400 clamp(26px,2.25vw,37px)/1.07 var(--serif);letter-spacing:-.035em;color:#970b24;overflow-wrap:break-word}
+.team-card-role{font:400 17px/1.25 var(--serif);color:#54443a;margin-top:11px}
+.team-cv-actions{margin-top:auto;padding-top:22px;display:flex;gap:8px;flex-wrap:wrap}
+.team-view-cv,.team-download-cv{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:39px;padding:10px 13px;font:700 11px/1.2 var(--sans);transition:background .2s,border-color .2s}
+.team-view-cv{background:#a30828;color:#fff}
+.team-view-cv:hover{background:#79031c}
+.team-download-cv{border:1px solid #c8b9a8;color:#8d0920}
+.team-download-cv:hover{background:#fff2e7;border-color:#9b112c}
+.member-info .team-cv-actions{margin-top:26px;padding:0;gap:11px}
+.member-info .team-view-cv,.member-info .team-download-cv{min-height:48px;padding:13px 18px;font-size:12px}
+.members-page .back-link{margin-top:8px}
+@media(max-width:900px){.team-members-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.members-page{padding-top:36px}.team-section{margin-bottom:54px}.team-section-head{gap:11px;margin-bottom:20px}.team-section-head h2{font-size:clamp(29px,7.5vw,43px);white-space:normal}.team-section-rule{margin-left:0}.team-members-grid{grid-template-columns:1fr;gap:16px}.team-card-art{min-height:115px}.team-card-mark{font-size:65px}.team-card-body{min-height:auto;padding:20px 23px 24px}.team-card-body h3{font-size:34px}.team-cv-actions{margin-top:0}}
