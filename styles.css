@@ -154,13 +154,13 @@
   .landing-column{padding-top:100px}
   .landing-column > .decor-island{top:6px;left:39%;width:53%}
 }
-@media(orientation:landscape) and (max-height:600px) and (min-width:601px) and (max-width:1200px){
-  .landing-column{padding-top:90px}
-  .landing-column > .decor-island{top:6px;left:39%;width:min(53%,380px);opacity:.7}
-}
 @media(max-width:600px){
   .landing-column{padding-top:0}
   .landing-column > .decor-island{top:-47px;left:40%;width:60%;max-width:450px;opacity:.7}
+}
+@media(orientation:landscape) and (max-height:600px) and (max-width:1200px){
+  .landing-column{padding-top:90px}
+  .landing-column > .decor-island{top:6px;left:39%;width:min(53%,380px);max-width:380px;opacity:.7}
 }
 
 /* Typeset Shakespeare as three deliberate verse lines at every viewport size. */
