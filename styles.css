@@ -132,3 +132,21 @@
 @media(min-width:901px){.landing-inner{row-gap:38px}}
 @media(max-width:900px){.landing-quote-kavafis{max-width:650px}}
 @media(max-width:600px){.landing-quote-kavafis{padding:22px 27px 18px}.landing-quote-kavafis blockquote{font-size:clamp(24px,6vw,33px)}.landing-quote-kavafis::before{left:1px}}
+
+
+/* Decorative ITACA island: lift above the company title, duplicate for the school on phones only. */
+.landing-school > .decor-island{display:none}
+@media (max-width:600px){
+  .landing-company > .decor-island{top:-47px}
+  .landing-school > .decor-island{
+    display:block;
+    position:absolute;
+    top:-47px;
+    left:40%;
+    width:60%;
+    max-width:450px;
+    opacity:.7;
+    pointer-events:none;
+    z-index:0;
+  }
+}
