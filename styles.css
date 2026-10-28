@@ -149,12 +149,24 @@
 }
 
 
-/* Original stage photography, softened with a deep burgundy theatrical veil.
-   The golden copy remains readable beside the red curtain and actors. */
+/* ITACA: a velvet-bordeaux theatrical curtain with illuminated uneven folds.
+   The dark stage dissolves into burgundy above the actors' red cloth. */
 .hero-home{
-  background:
-    radial-gradient(ellipse 75% 100% at 15% 20%,rgba(107,51,62,.43),transparent 85%),
-    linear-gradient(105deg,#291924 0%,#171019 49%,#08060a 100%);
+  background-color:#170912;
+  background-image:
+    linear-gradient(180deg,rgba(4,1,5,.7) 0%,rgba(11,3,9,.17) 23%,rgba(13,4,12,.04) 62%,rgba(6,1,6,.26) 100%),
+    radial-gradient(ellipse 54% 80% at 26% 48%,rgba(142,43,71,.33) 0%,rgba(104,23,52,.22) 40%,rgba(28,5,20,0) 94%),
+    repeating-linear-gradient(91deg,
+      rgba(5,0,8,.48) 0%,
+      rgba(92,21,47,.24) 3%,
+      rgba(138,41,62,.37) 5%,
+      rgba(36,7,29,.24) 9%,
+      rgba(5,0,8,.56) 12%,
+      rgba(94,21,45,.15) 15%,
+      rgba(147,50,72,.36) 17%,
+      rgba(7,0,9,.62) 20%),
+    linear-gradient(95deg,#280e1b 0%,#401127 28%,#210d1b 55%,#090509 85%);
+  background-blend-mode:normal,screen,normal,normal;
 }
 .hero-home::before{
   display:block;
@@ -163,7 +175,12 @@
   inset:0;
   z-index:1;
   pointer-events:none;
-  background:linear-gradient(103deg,rgba(75,33,50,.13),transparent 70%);
+  background:
+    radial-gradient(ellipse 11% 90% at 15% 60%,rgba(169,64,86,.15),transparent 90%),
+    radial-gradient(ellipse 17% 85% at 40% 44%,rgba(194,68,89,.1),transparent 80%),
+    linear-gradient(180deg,rgba(0,0,0,.38),transparent 28%,transparent 82%,rgba(0,0,0,.2));
+  -webkit-mask-image:linear-gradient(to right,#000 0%,#000 37%,transparent 78%);
+  mask-image:linear-gradient(to right,#000 0%,#000 37%,transparent 78%);
 }
 .hero-home::after,.hero-home .hero-scrim{display:none}
 .hero-home .hero-stage-photo{
@@ -176,15 +193,16 @@
   max-width:none;
   height:auto;
   pointer-events:none;
+  mix-blend-mode:screen;
   -webkit-mask-image:linear-gradient(to right,transparent 0%,black 9%);
   mask-image:linear-gradient(to right,transparent 0%,black 9%);
 }
 .hero-home .hero-content{position:relative;z-index:2}
-.hero-home h1{color:#f4bd66}
-.hero-home p{color:#f3c880}
+.hero-home h1{color:#f4bd66;text-shadow:0 2px 12px rgba(13,3,10,.3)}
+.hero-home p{color:#f3c880;text-shadow:0 2px 9px rgba(13,3,10,.27)}
 .hero-home .little-line{background:#f1b85c;opacity:1}
 
-/* On landscape phones trim the empty stage floor and the performers' feet. */
+/* Landscape phones retain their trimmed three-actor framing. */
 @media (orientation:landscape) and (max-height:600px) and (max-width:1200px){
   .hero-home{min-height:0}
   .hero-home .hero-stage-photo{top:-15px;left:43vw;width:95vw}
@@ -194,7 +212,7 @@
   .hero-home .little-line{margin-top:18px}
 }
 
-/* Upright phones: bring the curtain right up to the gold copy without overlap. */
+/* Portrait phones keep gold text, nearby red drape and short band. */
 @media (max-width:600px) and (orientation:portrait){
   .hero-home{min-height:0}
   .hero-home .hero-stage-photo{top:0;left:30vw;width:215vw}
