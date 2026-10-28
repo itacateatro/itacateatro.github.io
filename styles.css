@@ -122,3 +122,13 @@
 .landing-quote-school blockquote{font:italic 400 clamp(16px,1.19vw,19px)/1.58 var(--serif);letter-spacing:0}
 @media(max-width:900px){.landing-quote{margin-top:24px;max-width:700px}.landing-quote-school blockquote{font-size:18px}}
 @media(max-width:600px){.landing-quote{padding-left:38px}.landing-quote::before{font-size:70px}.landing-quote-school blockquote{font-size:16.5px;line-height:1.58}}
+
+
+/* Kavafis epigraph: first element of Home, before the two balanced columns. */
+.landing-quote-kavafis{grid-column:1/-1;justify-self:center;width:min(100%,760px);max-width:none;margin:0;padding:22px 34px 19px;text-align:center;border-top:1px solid #d3c1ab;border-bottom:1px solid #e3d6c4}
+.landing-quote-kavafis::before{top:5px;left:10px}
+.landing-quote-kavafis blockquote{font-size:clamp(25px,2.7vw,40px);line-height:1.22;letter-spacing:-.02em}
+.landing-quote-kavafis figcaption{margin-top:14px}
+@media(min-width:901px){.landing-inner{row-gap:38px}}
+@media(max-width:900px){.landing-quote-kavafis{max-width:650px}}
+@media(max-width:600px){.landing-quote-kavafis{padding:22px 27px 18px}.landing-quote-kavafis blockquote{font-size:clamp(24px,6vw,33px)}.landing-quote-kavafis::before{left:1px}}
