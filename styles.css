@@ -110,3 +110,15 @@
 .members-page .back-link{margin-top:8px}
 @media(max-width:900px){.team-members-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.members-page{padding-top:36px}.team-section{margin-bottom:54px}.team-section-head{gap:11px;margin-bottom:20px}.team-section-head h2{font-size:clamp(29px,7.5vw,43px);white-space:normal}.team-section-rule{margin-left:0}.team-members-grid{grid-template-columns:1fr;gap:16px}.team-card-art{min-height:115px}.team-card-mark{font-size:65px}.team-card-body{min-height:auto;padding:20px 23px 24px}.team-card-body h3{font-size:34px}.team-cv-actions{margin-top:0}}
+
+
+/* Homepage theatrical quotations: aligned tiles, quotations as editorial epigraphs */
+.landing-quote{position:relative;border-top:1px solid #d3c1ab;margin-top:28px;padding:22px 8px 0 49px;max-width:100%;color:#44312f}
+.landing-quote::before{content:"“";position:absolute;left:0;top:10px;color:#b70a2a;font:400 88px/.9 var(--serif);opacity:.8}
+.landing-quote blockquote{font:italic 400 clamp(19px,1.55vw,24px)/1.4 var(--serif);letter-spacing:-.012em}
+.landing-quote figcaption{font:600 10px/1.4 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:#a8753b;margin-top:15px}
+.landing-quote figcaption cite{font-style:italic}
+.landing-quote-school::before{color:#d59b41}
+.landing-quote-school blockquote{font:italic 400 clamp(16px,1.19vw,19px)/1.58 var(--serif);letter-spacing:0}
+@media(max-width:900px){.landing-quote{margin-top:24px;max-width:700px}.landing-quote-school blockquote{font-size:18px}}
+@media(max-width:600px){.landing-quote{padding-left:38px}.landing-quote::before{font-size:70px}.landing-quote-school blockquote{font-size:16.5px;line-height:1.58}}
