@@ -165,7 +165,7 @@
 
 /* Typeset Shakespeare as three deliberate verse lines at every viewport size. */
 .landing-quote-company .hamlet-line{display:block}
-.landing-quote-company .hamlet-line:last-child{padding-left:.12em}
+
 
 /* Kavafis: one unbroken line on wide and landscape screens, two on portrait phones. */
 .landing-quote-kavafis blockquote{white-space:nowrap}
