@@ -134,19 +134,25 @@
 @media(max-width:600px){.landing-quote-kavafis{padding:22px 27px 18px}.landing-quote-kavafis blockquote{font-size:clamp(24px,6vw,33px)}.landing-quote-kavafis::before{left:1px}}
 
 
-/* Decorative ITACA island: lift above the company title, duplicate for the school on phones only. */
+/* ITACA island above both home section titles, also on phones held horizontally. */
 .landing-school > .decor-island{display:none}
-@media (max-width:600px){
-  .landing-company > .decor-island{top:-47px}
+@media (max-width:900px), (orientation:landscape) and (max-height:600px) and (max-width:1200px){
   .landing-school > .decor-island{
     display:block;
     position:absolute;
     top:-47px;
-    left:40%;
-    width:60%;
+    left:49%;
+    width:58%;
     max-width:450px;
     opacity:.7;
     pointer-events:none;
     z-index:0;
   }
+  .landing-company > .decor-island{top:-47px}
+}
+@media (min-width:601px) and (max-width:900px){
+  .landing-school > .decor-island{left:44%;width:50%}
+}
+@media (max-width:600px){
+  .landing-school > .decor-island{left:40%;width:60%}
 }
