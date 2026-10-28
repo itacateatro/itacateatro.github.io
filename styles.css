@@ -156,3 +156,18 @@
 @media (max-width:600px){
   .landing-school > .decor-island{left:40%;width:60%}
 }
+
+
+/* Landscape phones: keep the school island entirely above its heading. */
+@media (orientation:landscape) and (max-height:600px) and (min-width:601px) and (max-width:1200px){
+  .landing-school > .decor-island{
+    top:-64px;
+    left:auto;
+    right:3%;
+    width:min(39%,260px);
+    height:55px;
+    max-width:none;
+    object-fit:contain;
+    object-position:center bottom;
+  }
+}
