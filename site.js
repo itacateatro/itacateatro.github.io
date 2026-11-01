@@ -45,4 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
       submenuButtons.forEach(toggle => setSubmenu(toggle, false));
     }
   });
+  // hero-gallery-interval: advance one production photograph every three seconds.
+  const heroSlides=[...document.querySelectorAll('.hero-home .hero-slide')];
+  if(heroSlides.length>1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    let current=0;
+    window.setInterval(()=>{
+      if(document.hidden)return;
+      heroSlides[current].classList.remove('is-active');
+      current=(current+1)%heroSlides.length;
+      heroSlides[current].classList.add('is-active');
+    },3000);
+  }
+
 });

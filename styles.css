@@ -183,19 +183,34 @@
   mask-image:linear-gradient(to right,#000 0%,#000 37%,transparent 78%);
 }
 .hero-home::after,.hero-home .hero-scrim{display:none}
-.hero-home .hero-stage-photo{
-  display:block;
+/* Seven original ITACA production photos, cross-fading behind the preserved gold copy. */
+.hero-home .hero-media{
   position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  width:72%;
+  overflow:hidden;
   z-index:0;
-  top:-30px;
-  left:48vw;
-  width:74vw;
-  max-width:none;
-  height:auto;
   pointer-events:none;
-  mix-blend-mode:screen;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 9%);
-  mask-image:linear-gradient(to right,transparent 0%,black 9%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 22%,#000 53%);
+  mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 22%,#000 53%);
+}
+.hero-home .hero-slide{
+  position:absolute;
+  display:block;
+  width:100%;
+  height:100%;
+  inset:0;
+  max-width:none;
+  object-fit:cover;
+  object-position:var(--focus-desktop,center);
+  opacity:0;
+  transition:opacity .75s ease-in-out;
+}
+.hero-home .hero-slide.is-active{opacity:1}
+@media (prefers-reduced-motion:reduce){
+  .hero-home .hero-slide{transition:none}
 }
 .hero-home .hero-content{position:relative;z-index:2}
 .hero-home h1{color:#f4bd66;text-shadow:0 2px 12px rgba(13,3,10,.3)}
@@ -205,7 +220,8 @@
 /* Landscape phones retain their trimmed three-actor framing. */
 @media (orientation:landscape) and (max-height:600px) and (max-width:1200px){
   .hero-home{min-height:0}
-  .hero-home .hero-stage-photo{top:-15px;left:43vw;width:95vw}
+  .hero-home .hero-media{width:67%;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.20) 18%,#000 48%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.20) 18%,#000 48%)}
+  .hero-home .hero-slide{object-position:var(--focus-landscape,center)}
   .hero-home .hero-content{margin-left:5vw;width:52vw;padding:53px 0 19px}
   .hero-home h1{font-size:clamp(38px,5.4vw,52px);line-height:1}
   .hero-home p{font-size:16px;line-height:1.35;margin-top:20px;max-width:100%}
@@ -215,7 +231,8 @@
 /* Portrait phones keep gold text, nearby red drape and short band. */
 @media (max-width:600px) and (orientation:portrait){
   .hero-home{min-height:0}
-  .hero-home .hero-stage-photo{top:0;left:30vw;width:215vw}
+  .hero-home .hero-media{width:68%;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.14) 22%,#000 63%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.14) 22%,#000 63%)}
+  .hero-home .hero-slide{object-position:var(--focus-portrait,center)}
   .hero-home .hero-content{margin-left:6vw;width:59vw;padding:48px 0 16px}
   .hero-home h1{font-size:clamp(32px,8.5vw,41px);line-height:1.06}
   .hero-home p{font-size:15px;line-height:1.39;max-width:100%;margin-top:22px}
