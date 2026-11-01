@@ -221,3 +221,99 @@
   .hero-home p{font-size:15px;line-height:1.39;max-width:100%;margin-top:22px}
   .hero-home .little-line{margin-top:18px}
 }
+
+
+/* ITACA · new editorial subsections — designed for desktop and both phone orientations */
+body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.itaca-detail-page{background:linear-gradient(180deg,#fffdfb 0%,#fff9f2 100%)}
+.itaca-section-intro,.itaca-archive-heading{max-width:840px;margin:0 0 33px}
+.itaca-section-intro h2,.itaca-archive-heading h2{font:400 clamp(37px,4vw,59px)/1.04 var(--serif);letter-spacing:-.042em;color:#a20727;margin-top:14px}
+.itaca-section-intro>p,.itaca-archive-heading>p{font:400 18px/1.6 var(--serif);color:#65564e;margin-top:13px}
+.itaca-program-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:27px;align-items:stretch}
+.itaca-program-card{background:#fff;border:1px solid #e9ded0;box-shadow:0 16px 42px rgba(68,24,29,.08);overflow:hidden;min-width:0}
+.itaca-program-visual{height:180px;position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(120deg,#690c22 0%,#b00e2c 56%,#8a1a29 100%)}
+.itaca-program-visual:before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(105deg,transparent 0%,rgba(255,216,163,.05) 6%,transparent 13%,rgba(20,0,8,.22) 19%);transform:rotate(-8deg)}
+.itaca-program-visual:after{content:"";position:absolute;right:-50px;top:-100px;border:1px solid #f4ca9680;border-radius:50%;width:350px;height:350px}
+.itaca-modern{background:linear-gradient(122deg,#47091c,#8a122e 52%,#ac6348)}
+.itaca-visual-number{position:absolute;top:24px;left:28px;color:#ffdfb3;font:600 12px/1 var(--sans);letter-spacing:.18em;z-index:1}
+.itaca-visual-mark{position:absolute;right:28px;bottom:-25px;font:400 clamp(64px,8vw,124px)/1 var(--serif);letter-spacing:-.08em;color:#fff3e63a;z-index:1}
+.itaca-program-text{padding:37px 37px 43px;min-height:246px;display:flex;flex-direction:column;align-items:flex-start}
+.itaca-program-text h3{font:400 clamp(30px,3vw,43px)/1.13 var(--serif);letter-spacing:-.035em;color:#9f0a27;margin-top:18px;text-wrap:balance}
+.itaca-program-subtitle{font:italic 400 clamp(19px,1.65vw,24px)/1.35 var(--serif);color:#4b3b35;margin-top:16px}
+.itaca-gold-line{display:block;width:56px;height:2px;background:#cb9a60;margin-top:auto;transform:translateY(24px)}
+.itaca-spotlight{display:grid;grid-template-columns:1fr 1.12fr;min-width:0;background:#fff;border:1px solid #e8dfd4;box-shadow:0 18px 46px rgba(68,24,29,.07);overflow:hidden}
+.itaca-spotlight-art{position:relative;min-height:340px;isolation:isolate;background:#790b24}
+.itaca-spotlight-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7)}
+.itaca-spotlight-art:after{content:"";position:absolute;inset:0;background:linear-gradient(128deg,#4e0820bb,#b10b2c51 64%,#2e0619aa)}
+.itaca-spotlight-overlay{position:absolute;left:32px;bottom:26px;z-index:1;color:#fff4e1;font:600 12px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.itaca-spotlight-overlay span{color:#efbb76}
+.itaca-spotlight-body{padding:clamp(32px,4.8vw,74px);min-width:0}
+.itaca-spotlight-body h3{font:400 clamp(39px,4.3vw,66px)/1.03 var(--serif);color:#a00727;letter-spacing:-.045em;margin-top:16px;text-wrap:balance}
+.itaca-spotlight-body .itaca-gold-line{margin:24px 0 0;transform:none}
+.itaca-spotlight-body>p{font:400 19px/1.6 var(--serif);color:#52413a;margin-top:24px}
+.itaca-spotlight-body .itaca-future-note{font:italic 16px/1.45 var(--serif);color:#826957;margin-top:18px}
+.itaca-additions{font:italic 17px/1.5 var(--serif);color:#85746b;margin-top:31px}
+.itaca-shows-page{background:linear-gradient(180deg,#fffdfb,#fff9f3)}
+.itaca-shows-current{padding-bottom:68px;border-bottom:1px solid #e6d9cb}
+.itaca-shows-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}
+.itaca-show-card{background:#fff;min-width:0;border:1px solid #e9ded4;box-shadow:0 12px 32px rgba(69,23,26,.065);overflow:hidden;display:flex;flex-direction:column}
+.itaca-show-figure{position:relative;overflow:hidden;height:123px;background:linear-gradient(125deg,#4b0717 0%,#aa0a2c 54%,#ca7952 100%)}
+.itaca-show-figure:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,#1e06121c 0%,#cb47662b 6%,#1e06122e 12%,transparent 21%)}
+.itaca-show-card:nth-child(2) .itaca-show-figure{background:linear-gradient(125deg,#64061d,#9c2441 59%,#bc7548)}
+.itaca-show-card:nth-child(3) .itaca-show-figure{background:linear-gradient(125deg,#2d0919,#7e1730 53%,#a14439)}
+.itaca-show-number{position:absolute;top:21px;left:23px;z-index:1;color:#f8d4a2;font:700 11px/1 var(--sans);letter-spacing:.22em}
+.itaca-show-watermark{position:absolute;right:18px;bottom:-17px;z-index:1;color:#fff9ef42;font:400 88px/1 var(--serif);letter-spacing:-.06em}
+.itaca-show-info{padding:27px 27px 30px;display:flex;flex-direction:column;flex:1;min-height:175px}
+.itaca-show-info h3{font:400 clamp(27px,2.55vw,38px)/1.13 var(--serif);color:#9a0a23;letter-spacing:-.034em}
+.itaca-show-sub{font:italic 16px/1.4 var(--serif);color:#6f5d51;margin-top:12px}
+.itaca-show-director{margin-top:auto;padding-top:20px;color:#8d613a;font:600 11px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.itaca-shows-archive{padding-top:69px}
+.itaca-year-nav{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 37px}
+.itaca-year-nav a{padding:11px 18px;border:1px solid #d8c4ad;color:#8b1931;font:700 12px/1.25 var(--sans);letter-spacing:.05em}
+.itaca-year-nav a:hover{background:#fff0e5;border-color:#ba8b54}
+.itaca-archive-list{border-top:1px solid #d9c5b5}
+.itaca-year{display:grid;grid-template-columns:135px minmax(0,1fr);border-bottom:1px solid #e5d9cf;gap:22px;padding:30px 0;scroll-margin-top:20px}
+.itaca-year-heading h3{font:400 clamp(39px,4vw,55px)/1 var(--serif);color:#a40b28;letter-spacing:-.05em}
+.itaca-year-heading>span{display:block;color:#927967;font:700 10px/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:8px}
+.itaca-year-items{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 30px}
+.itaca-year-items li{border-left:2px solid #d5b88e;padding:2px 0 3px 16px;min-width:0}
+.itaca-work-row strong{display:block;font:400 clamp(19px,1.7vw,24px)/1.17 var(--serif);letter-spacing:-.015em;color:#35252a;overflow-wrap:anywhere}
+.itaca-work-role{display:block;font:700 10px/1.35 var(--sans);color:#ab173a;letter-spacing:.075em;text-transform:uppercase;margin-top:9px}
+.itaca-work-by{font:italic 14px/1.44 var(--serif);color:#746257;margin-top:7px}
+.itaca-archive-source{font:italic 15px/1.5 var(--serif);color:#776b64;margin:30px 0 0}
+@media(max-width:1000px){
+  .itaca-program-grid{gap:18px}
+  .itaca-program-text{padding:29px 27px 37px}
+  .itaca-program-text h3{font-size:clamp(27px,3.3vw,40px)}
+  .itaca-year{grid-template-columns:102px minmax(0,1fr)}
+  .itaca-show-info{padding:23px 21px 26px}
+}
+@media(max-width:700px){
+  body[data-page="scuola"] .feature-grid{grid-template-columns:1fr}
+  .itaca-program-grid{grid-template-columns:1fr;gap:20px}
+  .itaca-program-visual{height:134px}
+  .itaca-program-text{min-height:200px}
+  .itaca-program-text h3{font-size:clamp(29px,7vw,40px)}
+  .itaca-spotlight{grid-template-columns:1fr}
+  .itaca-spotlight-art{min-height:205px}
+  .itaca-spotlight-body{padding:30px 25px 36px}
+  .itaca-spotlight-body h3{font-size:clamp(39px,9.8vw,52px)}
+  .itaca-shows-grid{grid-template-columns:1fr;gap:17px}
+  .itaca-show-card{flex-direction:row;min-height:165px}
+  .itaca-show-figure{width:29%;height:auto;min-height:165px;flex:none}
+  .itaca-show-watermark{font-size:48px;bottom:20px;right:-28px;transform:rotate(-90deg)}
+  .itaca-show-info{min-height:165px;padding:22px}
+  .itaca-show-info h3{font-size:clamp(25px,6vw,35px)}
+  .itaca-year{grid-template-columns:1fr;gap:18px;padding:26px 0}
+  .itaca-year-heading{display:flex;gap:17px;align-items:baseline}
+  .itaca-year-heading>span{margin-top:0}
+  .itaca-year-items{grid-template-columns:1fr;gap:17px}
+}
+@media(orientation:landscape) and (max-height:600px) and (min-width:701px) and (max-width:1200px){
+  .itaca-program-visual{height:130px}
+  .itaca-program-text{min-height:193px}
+  .itaca-spotlight-art{min-height:275px}
+  .itaca-spotlight-body{padding:28px}
+  .itaca-shows-grid{gap:12px}
+  .itaca-show-info{padding:20px 16px}
+}
