@@ -317,3 +317,53 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
   .itaca-shows-grid{gap:12px}
   .itaca-show-info{padding:20px 16px}
 }
+
+
+/* ITACA archive: standalone production cards, with the same italic-grey and
+   uppercase-gold typographic language as the current-production cards. */
+.itaca-year-items{align-items:stretch;gap:15px 19px}
+.itaca-year-items li.itaca-archive-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  min-height:160px;
+  padding:22px 23px 20px;
+  background:linear-gradient(130deg,#fffefc 0%,#fffaf5 100%);
+  border:1px solid #ebdfd1;
+  border-left:3px solid #d3b084;
+  box-shadow:0 9px 23px rgba(67,27,30,.052);
+}
+.itaca-work-title{
+  margin:0;
+  font:400 clamp(22px,1.9vw,30px)/1.16 var(--serif);
+  letter-spacing:-.022em;
+  color:#3d292c;
+  overflow-wrap:break-word;
+  text-wrap:balance;
+}
+.itaca-archive-card .itaca-work-by{
+  font:italic 400 clamp(16px,1.35vw,19px)/1.4 var(--serif);
+  color:#81766f;
+  margin:11px 0 0;
+}
+.itaca-archive-card .itaca-work-by.itaca-author-unlisted{
+  color:#9e948c;
+}
+.itaca-work-director{
+  margin-top:auto;
+  padding-top:20px;
+  color:#ac823f;
+  font:700 11px/1.4 var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.105em;
+}
+@media (max-width:700px){
+  .itaca-year-items li.itaca-archive-card{min-height:143px;padding:19px 19px 18px}
+  .itaca-work-title{font-size:clamp(23px,6.4vw,30px)}
+  .itaca-archive-card .itaca-work-by{font-size:17px}
+}
+@media (orientation:landscape) and (max-height:600px) and (min-width:701px) and (max-width:1200px){
+  .itaca-year-items{gap:12px}
+  .itaca-year-items li.itaca-archive-card{padding:18px 17px;min-height:145px}
+  .itaca-work-title{font-size:23px}
+}
