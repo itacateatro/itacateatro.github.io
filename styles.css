@@ -149,59 +149,35 @@
 }
 
 
-/* ITACA: a velvet-bordeaux theatrical curtain with illuminated uneven folds.
-   The dark stage dissolves into burgundy above the actors' red cloth. */
+
+/* ITACA home: the seven production photographs are the only hero backdrop.
+   No coloured curtain, gradients or masking layers cover the original images. */
 .hero-home{
-  background-color:#170912;
-  background-image:
-    linear-gradient(180deg,rgba(4,1,5,.7) 0%,rgba(11,3,9,.17) 23%,rgba(13,4,12,.04) 62%,rgba(6,1,6,.26) 100%),
-    radial-gradient(ellipse 54% 80% at 26% 48%,rgba(142,43,71,.33) 0%,rgba(104,23,52,.22) 40%,rgba(28,5,20,0) 94%),
-    repeating-linear-gradient(91deg,
-      rgba(5,0,8,.48) 0%,
-      rgba(92,21,47,.24) 3%,
-      rgba(138,41,62,.37) 5%,
-      rgba(36,7,29,.24) 9%,
-      rgba(5,0,8,.56) 12%,
-      rgba(94,21,45,.15) 15%,
-      rgba(147,50,72,.36) 17%,
-      rgba(7,0,9,.62) 20%),
-    linear-gradient(95deg,#280e1b 0%,#401127 28%,#210d1b 55%,#090509 85%);
-  background-blend-mode:normal,screen,normal,normal;
+  background:none;
 }
-.hero-home::before{
-  display:block;
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:
-    radial-gradient(ellipse 11% 90% at 15% 60%,rgba(169,64,86,.15),transparent 90%),
-    radial-gradient(ellipse 17% 85% at 40% 44%,rgba(194,68,89,.1),transparent 80%),
-    linear-gradient(180deg,rgba(0,0,0,.38),transparent 28%,transparent 82%,rgba(0,0,0,.2));
-  -webkit-mask-image:linear-gradient(to right,#000 0%,#000 37%,transparent 78%);
-  mask-image:linear-gradient(to right,#000 0%,#000 37%,transparent 78%);
+.hero-home::before,
+.hero-home::after,
+.hero-home .hero-scrim{
+  display:none;
+  content:none;
 }
-.hero-home::after,.hero-home .hero-scrim{display:none}
-/* Seven original ITACA production photos, cross-fading behind the preserved gold copy. */
 .hero-home .hero-media{
   position:absolute;
-  top:0;
-  bottom:0;
-  right:0;
-  width:72%;
+  inset:0;
+  width:100%;
+  height:100%;
   overflow:hidden;
   z-index:0;
   pointer-events:none;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 22%,#000 53%);
-  mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 22%,#000 53%);
+  -webkit-mask-image:none;
+  mask-image:none;
 }
 .hero-home .hero-slide{
   position:absolute;
+  inset:0;
   display:block;
   width:100%;
   height:100%;
-  inset:0;
   max-width:none;
   object-fit:cover;
   object-position:var(--focus-desktop,center);
@@ -209,36 +185,31 @@
   transition:opacity .75s ease-in-out;
 }
 .hero-home .hero-slide.is-active{opacity:1}
-@media (prefers-reduced-motion:reduce){
-  .hero-home .hero-slide{transition:none}
-}
 .hero-home .hero-content{position:relative;z-index:2}
 .hero-home h1{color:#f4bd66;text-shadow:0 2px 12px rgba(13,3,10,.3)}
 .hero-home p{color:#f3c880;text-shadow:0 2px 9px rgba(13,3,10,.27)}
 .hero-home .little-line{background:#f1b85c;opacity:1}
-
-/* Landscape phones retain their trimmed three-actor framing. */
+@media (prefers-reduced-motion:reduce){
+  .hero-home .hero-slide{transition:none}
+}
+/* Landscape phones: crop the full-bleed photo to the established mobile band. */
 @media (orientation:landscape) and (max-height:600px) and (max-width:1200px){
   .hero-home{min-height:0}
-  .hero-home .hero-media{width:67%;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.20) 18%,#000 48%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.20) 18%,#000 48%)}
   .hero-home .hero-slide{object-position:var(--focus-landscape,center)}
   .hero-home .hero-content{margin-left:5vw;width:52vw;padding:53px 0 19px}
   .hero-home h1{font-size:clamp(38px,5.4vw,52px);line-height:1}
   .hero-home p{font-size:16px;line-height:1.35;margin-top:20px;max-width:100%}
   .hero-home .little-line{margin-top:18px}
 }
-
-/* Portrait phones keep gold text, nearby red drape and short band. */
+/* Portrait phones: full-width photographs, same compact text layout. */
 @media (max-width:600px) and (orientation:portrait){
   .hero-home{min-height:0}
-  .hero-home .hero-media{width:68%;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.14) 22%,#000 63%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.14) 22%,#000 63%)}
   .hero-home .hero-slide{object-position:var(--focus-portrait,center)}
   .hero-home .hero-content{margin-left:6vw;width:59vw;padding:48px 0 16px}
   .hero-home h1{font-size:clamp(32px,8.5vw,41px);line-height:1.06}
   .hero-home p{font-size:15px;line-height:1.39;max-width:100%;margin-top:22px}
   .hero-home .little-line{margin-top:18px}
 }
-
 
 /* ITACA · new editorial subsections — designed for desktop and both phone orientations */
 body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
