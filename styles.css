@@ -422,3 +422,28 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
  .places-home-countries{padding:24px 22px 24px 0}
  .places-home-countries a{min-height:110px;padding:14px}
 }
+
+
+/* Marco Alotto: original theatre photograph, unobstructed by the old monogram and gold arc. */
+.member-card-marco .member-art{background:#070608;isolation:isolate}
+.member-card-marco .member-art::before,
+.member-card-marco .member-art::after{content:none;display:none}
+.member-card-marco .member-art-photo{
+  display:block;position:absolute;inset:0;width:100%;height:100%;max-width:none;
+  object-fit:cover;object-position:48% center;z-index:0;
+}
+.member-card-marco .member-art-label,
+.member-card-marco .member-art-caption{
+  position:relative;z-index:2;color:#fff9ee;
+  text-shadow:0 1px 8px rgba(0,0,0,.94),0 2px 18px rgba(0,0,0,.65)
+}
+.member-card-marco .member-art-label span{color:#e7bc84}
+.member-card-marco .member-bio em{font-style:italic}
+@media(max-width:760px){
+  .member-card-marco .member-art{min-height:clamp(220px,57vw,345px)}
+  .member-card-marco .member-art-photo{object-position:50% 42%}
+}
+@media(orientation:landscape) and (max-height:600px) and (min-width:701px) and (max-width:1200px){
+  .member-card-marco .member-art{min-height:360px}
+  .member-card-marco .member-art-photo{object-position:49% center}
+}
