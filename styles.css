@@ -494,3 +494,125 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
   color:#F1ECE5;
   text-shadow:0 1px 6px rgba(0,0,0,.2);
 }
+
+
+/* Architectural engravings for I luoghi di Itaca. Original translucent,
+   monochrome artwork floats over the existing burgundy palette. */
+.landing-places .places-mole-art{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:url("assets/mole-antonelliana-engraving.svg");
+  background-repeat:no-repeat;
+  background-position:right -4% center;
+  background-size:auto 108%;
+  opacity:.34;
+  filter:saturate(.77);
+}
+.landing-places .landing-places-copy,
+.landing-places .places-home-countries{
+  position:relative;
+  z-index:1;
+}
+.landing-places .places-home-countries a{
+  isolation:isolate;
+}
+.landing-places .places-home-countries a::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background-repeat:no-repeat;
+  background-position:right -5px bottom -6px;
+  background-size:auto 102%;
+  opacity:.43;
+  pointer-events:none;
+}
+.places-home-countries a[href$="#italia"]::before{
+  background-image:url("assets/colosseo-engraving.svg");
+  background-size:96% auto;
+  background-position:right -12px bottom -20px;
+}
+.places-home-countries a[href$="#francia"]::before{
+  background-image:url("assets/tour-eiffel-engraving.svg");
+  background-size:auto 112%;
+  background-position:right 2px bottom -12px;
+}
+.places-home-countries a[href$="#polonia"]::before{
+  background-image:url("assets/mariacki-krakow-engraving.svg");
+  background-size:auto 105%;
+  background-position:right -3px bottom -15px;
+}
+.places-home-countries a[href$="#irlanda"]::before{
+  background-image:url("assets/oconnell-monument-engraving.svg");
+  background-size:auto 104%;
+  background-position:right -5px bottom -11px;
+}
+.landing-places .places-home-countries a small,
+.landing-places .places-home-countries a .places-country-name,
+.landing-places .places-home-countries a > span{
+  position:relative;
+  z-index:2;
+  text-shadow:0 2px 9px rgba(40,5,17,.62);
+}
+.landing-places .places-home-countries a .places-country-name{
+  align-self:flex-start;
+  font:inherit;
+  font-weight:400;
+}
+.landing-places .places-home-countries a > span{
+  position:absolute;
+}
+/* Larger screens retain the two-column theatrical composition. */
+@media(min-width:901px){
+  .landing-places .places-mole-art{
+    background-position:right -3% center;
+    background-size:auto 112%;
+    opacity:.29;
+  }
+}
+/* Portrait screens keep the Mole toward the right, away from the verse. */
+@media(max-width:700px){
+  .landing-places .places-mole-art{
+    background-position:right -28px top 13px;
+    background-size:auto 70%;
+    opacity:.28;
+  }
+  .landing-places .places-home-countries a::before{opacity:.36}
+}
+/* Narrow portrait devices: monuments remain subdued behind the country labels. */
+@media(max-width:420px) and (orientation:portrait){
+  .landing-places .places-mole-art{
+    background-position:right -42px top 33px;
+    background-size:auto 65%;
+    opacity:.25;
+  }
+  .landing-places .places-home-countries a::before{opacity:.33}
+}
+/* Landscape phones: use full-height background profile without crowding text. */
+@media(orientation:landscape) and (max-height:600px) and (min-width:701px) and (max-width:1200px){
+  .landing-places .places-mole-art{
+    background-position:right 1% center;
+    background-size:auto 100%;
+    opacity:.28;
+  }
+  .landing-places .places-home-countries a::before{opacity:.37}
+}
+/* Matching architectural engravings in the destination nation's title panels. */
+.places-country-top::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background-repeat:no-repeat;
+  background-size:auto 170%;
+  background-position:right 1% center;
+  opacity:.23;
+  pointer-events:none;
+}
+#italia .places-country-top::before{background-image:url("assets/colosseo-engraving.svg");background-size:auto 200%}
+#francia .places-country-top::before{background-image:url("assets/tour-eiffel-engraving.svg");background-size:auto 158%}
+#polonia .places-country-top::before{background-image:url("assets/mariacki-krakow-engraving.svg");background-size:auto 168%}
+#irlanda .places-country-top::before{background-image:url("assets/oconnell-monument-engraving.svg");background-size:auto 160%}
+.places-country-top .places-country-number{position:relative;z-index:1}
