@@ -355,3 +355,70 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
   .itaca-year-items li.itaca-archive-card{padding:18px 17px;min-height:145px}
   .itaca-work-title{font-size:23px}
 }
+
+
+/* I luoghi di Itaca — fifth navigation item; third editorial Home section. */
+@media(min-width:901px){.main-nav{gap:clamp(10px,1.55vw,24px);margin-right:clamp(20px,3.2vw,56px)}.main-link{font-size:clamp(9.5px,.8vw,11.5px);letter-spacing:.075em}}
+@media(min-width:901px) and (max-width:1150px){.main-nav{gap:11px;margin-right:23px}.main-link{font-size:9.5px;letter-spacing:.045em}.brand{width:48vw}}
+.landing-places{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);margin-top:42px;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(125deg,#75132c,#4b0b1e 65%,#2c0a16);border-top:3px solid #d3a56f;color:#fff7e9;min-width:0}
+.landing-places::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 45% 90% at 70% 40%,#e6a66d24,transparent 90%),repeating-linear-gradient(102deg,transparent 0%,#ffffff06 7%,#1e041022 17%,transparent 26%)}
+.landing-places-copy{padding:clamp(38px,5vw,77px) clamp(26px,5vw,76px);min-width:0}
+.places-eyebrow{display:block;font:700 10px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#e7ba84}
+.landing-places h2{font:400 clamp(40px,4.8vw,68px)/1.08 var(--serif);letter-spacing:-.045em;color:#f1d19f;margin:19px 0 0}
+.places-verse{font:italic 400 clamp(21px,2.1vw,29px)/1.36 var(--serif);margin-top:22px;color:#fff9ed}
+.places-verse span,.places-page-poem span{display:block}
+.places-home-cta{display:inline-flex;gap:23px;align-items:center;margin-top:29px;padding:0 0 11px;border-bottom:1px solid #e4be8a;color:#ffe3b5;text-transform:uppercase;letter-spacing:.14em;font:700 11px/1.3 var(--sans)}
+.places-home-cta:hover{color:white}
+.places-home-countries{min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;padding:clamp(28px,4vw,60px);align-content:center}
+.places-home-countries a{position:relative;min-height:145px;display:flex;flex-direction:column;justify-content:space-between;padding:22px;border:1px solid #eed0aa60;background:#13040b28;color:#fff5e4;font:400 clamp(23px,2.2vw,31px)/1.15 var(--serif)}
+.places-home-countries a:hover{background:#ffecce1c;border-color:#f4d0a0}
+.places-home-countries small{font:700 10px/1 var(--sans);letter-spacing:.17em;color:#edbd85}
+.places-home-countries a span{position:absolute;right:20px;top:20px;color:#edbd85;font:20px/1 var(--sans)}
+.places-page-heading h1{font-size:clamp(48px,6.6vw,88px);text-wrap:balance}
+.places-page-poem{font:italic 400 clamp(21px,2.5vw,33px)/1.35 var(--serif);color:#61443b;margin-top:25px}
+.places-page-content{background:linear-gradient(180deg,#fffdfb,#fdf8f1)}
+.places-page-intro{max-width:840px}
+.places-page-intro h2{font:400 clamp(35px,4.2vw,57px)/1.1 var(--serif);color:#a20e2b;letter-spacing:-.038em;margin-top:14px}
+.places-page-intro p{font:400 clamp(17px,1.6vw,20px)/1.55 var(--serif);color:#6c5b54;margin-top:17px}
+.places-country-jump{display:flex;flex-wrap:wrap;gap:10px;margin:33px 0}
+.places-country-jump a{padding:11px 18px;border:1px solid #d7c0a8;color:#931b35;text-transform:uppercase;font:700 11px/1.35 var(--sans);letter-spacing:.075em}
+.places-country-jump a:hover{background:#fbefe4}
+.places-country-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.places-country{background:#fff;border:1px solid #e8dacc;min-width:0;scroll-margin-top:24px;box-shadow:0 16px 32px #45141b0e}
+.places-country-top{display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;min-height:139px;padding:24px 30px;background:linear-gradient(120deg,#700d29,#a01b3b 66%,#bc684e)}
+.places-country-top::after{content:"";position:absolute;right:-50px;top:-100px;width:255px;height:255px;border:1px solid #f4d3a577;border-radius:50%}
+.places-country-number{font:700 11px/1 var(--sans);letter-spacing:.17em;color:#f2d0a2}
+.places-country-top h3{font:400 clamp(38px,4.2vw,56px)/1 var(--serif);color:#fff7eb;position:relative;z-index:1;letter-spacing:-.035em}
+.places-country-bottom{padding:28px 30px 33px}
+.places-country-venues{list-style:none;margin:18px 0 0;padding:0}
+.places-country-venues li{padding:16px 0;border-top:1px solid #efe3d7;color:#8e7d70;font:italic 400 18px/1.4 var(--serif)}
+@media(max-width:900px){
+ .landing-places{margin-top:6px}
+ .landing-places-copy{padding:35px 29px}
+ .landing-places h2{font-size:clamp(36px,5.5vw,52px)}
+ .places-verse{font-size:clamp(19px,2.5vw,24px)}
+ .places-home-countries{padding:28px 25px 28px 0;gap:9px}
+ .places-home-countries a{min-height:117px;padding:17px;font-size:23px}
+}
+@media(max-width:700px){
+ .landing-places{grid-template-columns:1fr;margin-top:0}
+ .landing-places-copy{padding:37px 27px 10px}
+ .landing-places h2{font-size:clamp(39px,8.8vw,55px)}
+ .places-verse{font-size:clamp(19px,4.9vw,24px)}
+ .places-home-countries{padding:24px 27px 32px}
+ .places-home-countries a{min-height:100px}
+ .places-page-heading h1{font-size:clamp(42px,8.8vw,60px)}
+ .places-page-poem{font-size:clamp(20px,4.8vw,27px)}
+ .places-country-grid{grid-template-columns:1fr;gap:18px}
+ .places-country-top{min-height:123px;padding:22px 25px}
+ .places-country-bottom{padding:24px 25px}
+ .places-country-jump a{padding:10px 14px}
+}
+@media(orientation:landscape) and (max-height:600px) and (min-width:701px) and (max-width:1200px){
+ .landing-places{grid-template-columns:minmax(0,1fr) minmax(0,.86fr)}
+ .landing-places-copy{padding:32px 26px}
+ .landing-places h2{font-size:clamp(35px,5vw,51px)}
+ .places-verse{font-size:clamp(18px,2.35vw,23px)}
+ .places-home-countries{padding:24px 22px 24px 0}
+ .places-home-countries a{min-height:110px;padding:14px}
+}
