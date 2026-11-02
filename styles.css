@@ -437,6 +437,7 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
   position:relative;z-index:2;color:#fff9ee;
   text-shadow:0 1px 8px rgba(0,0,0,.94),0 2px 18px rgba(0,0,0,.65)
 }
+.member-card-marco .member-art-label{align-self:flex-end;text-align:right;max-width:100%}
 .member-card-marco .member-art-label span{color:#e7bc84}
 .member-card-marco .member-bio em{font-style:italic}
 @media(max-width:760px){
