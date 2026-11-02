@@ -482,3 +482,26 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
   .hero-home .hero-copy-panel{padding:13px 14px 16px}
   .hero-home .hero-copy-panel p{margin-top:15px}
 }
+
+
+/* Home: restrained ITACA palette — ruby title, warm gold subtitle and
+   selected words, soft ivory body copy. Restricted to the local text panel. */
+.hero-home .hero-copy-panel{
+  background:rgba(44,45,48,.77);
+}
+.hero-home .hero-copy-panel .hero-brand-ruby{
+  color:#FF8990;
+  text-shadow:0 2px 10px rgba(30,3,13,.32);
+}
+.hero-home .hero-copy-panel .hero-brand-gold{
+  color:#F3C77D;
+  text-shadow:0 2px 10px rgba(30,3,13,.32);
+}
+.hero-home .hero-copy-panel p{
+  color:#F1ECE5;
+  text-shadow:0 1px 6px rgba(0,0,0,.2);
+}
+.hero-home .hero-copy-panel .hero-copy-gold{
+  color:#F3C77D;
+  font-weight:500;
+}
