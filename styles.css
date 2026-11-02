@@ -616,3 +616,82 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
 #polonia .places-country-top::before{background-image:url("assets/mariacki-krakow-engraving.svg");background-size:auto 168%}
 #irlanda .places-country-top::before{background-image:url("assets/oconnell-monument-engraving.svg");background-size:auto 160%}
 .places-country-top .places-country-number{position:relative;z-index:1}
+
+/* Final architectural study: detailed copper engravings, matching the approved
+   I luoghi di Itaca visual. Replaces earlier schematic vector drawings. */
+.landing-places .places-mole-art {
+  background-image:url("assets/mole-antonelliana-detailed.webp");
+  background-size:auto 104%;
+  background-position:right -3% center;
+  opacity:.38;
+  filter:none;
+}
+.landing-places .places-home-countries a::before {opacity:.57}
+.places-home-countries a[href$="#italia"]::before {
+  background-image:url("assets/colosseo-detailed.webp");
+  background-size:100% auto;
+  background-position:right -9px bottom -16px;
+}
+.places-home-countries a[href$="#francia"]::before {
+  background-image:url("assets/tour-eiffel-detailed.webp");
+  background-size:auto 130%;
+  background-position:right -3px bottom -15px;
+}
+.places-home-countries a[href$="#polonia"]::before {
+  background-image:url("assets/basilica-santa-maria-cracovia-detailed.webp");
+  background-size:auto 119%;
+  background-position:right -3px bottom -14px;
+}
+.places-home-countries a[href$="#irlanda"]::before {
+  background-image:url("assets/daniel-oconnell-monument-detailed.webp");
+  background-size:auto 117%;
+  background-position:right -3px bottom -15px;
+}
+/* The same detailed engravings subtly appear on national headings. */
+#italia .places-country-top::before {
+  background-image:url("assets/colosseo-detailed.webp");
+  background-size:auto 145%;
+}
+#francia .places-country-top::before {
+  background-image:url("assets/tour-eiffel-detailed.webp");
+  background-size:auto 158%;
+}
+#polonia .places-country-top::before {
+  background-image:url("assets/basilica-santa-maria-cracovia-detailed.webp");
+  background-size:auto 155%;
+}
+#irlanda .places-country-top::before {
+  background-image:url("assets/daniel-oconnell-monument-detailed.webp");
+  background-size:auto 155%;
+}
+.places-country-top::before {opacity:.35}
+@media (min-width:901px) {
+  .landing-places .places-mole-art {
+    background-size:auto 105%;
+    opacity:.33;
+  }
+}
+@media (max-width:700px) {
+  .landing-places .places-mole-art {
+    background-position:right -28px top 13px;
+    background-size:auto 65%;
+    opacity:.35;
+  }
+  .landing-places .places-home-countries a::before {opacity:.52}
+}
+@media (max-width:420px) and (orientation:portrait) {
+  .landing-places .places-mole-art {
+    background-position:right -42px top 33px;
+    background-size:auto 61%;
+    opacity:.31;
+  }
+  .landing-places .places-home-countries a::before {opacity:.48}
+}
+@media (orientation:landscape) and (max-height:600px) and (min-width:701px) and (max-width:1200px) {
+  .landing-places .places-mole-art {
+    background-position:right 1% center;
+    background-size:auto 98%;
+    opacity:.34;
+  }
+  .landing-places .places-home-countries a::before {opacity:.50}
+}
