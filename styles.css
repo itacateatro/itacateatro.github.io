@@ -695,3 +695,176 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
   }
   .landing-places .places-home-countries a::before {opacity:.50}
 }
+
+
+/* I LUOGHI DI ITACA — real, approved artwork slices from the selected mockup:
+   detailed Mole, natural foreground trees, country monuments and distant hills.
+   Live editable labels and clickable country links are kept separate from art. */
+.landing-places{
+  grid-template-columns:minmax(0,1fr);
+  gap:0;
+  background:linear-gradient(140deg,#48071A 0%,#741A2F 52%,#4A081C 100%);
+  padding:0 0 clamp(96px,10vw,144px);
+  margin-top:42px;
+}
+.landing-places::before{
+  background:radial-gradient(ellipse at 70% 26%,rgba(214,92,93,.23),transparent 62%);
+  z-index:0;
+}
+.landing-places::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:clamp(88px,12vw,146px);
+  z-index:0;pointer-events:none;
+  background:url("assets/itaca-luoghi-colline-approved.webp") center bottom / 100% 100% no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 35%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 35%);
+  opacity:.94;
+}
+.landing-places .places-mole-art{
+  inset:0;
+  background-image:url("assets/itaca-luoghi-mole-approved.webp");
+  background-repeat:no-repeat;
+  background-size:min(69%,780px) auto;
+  background-position:right top;
+  opacity:.96;
+  filter:none;
+  -webkit-mask-image:linear-gradient(to right,transparent 24%,rgba(0,0,0,.38) 43%,#000 69%);
+  mask-image:linear-gradient(to right,transparent 24%,rgba(0,0,0,.38) 43%,#000 69%);
+}
+.landing-places .landing-places-copy{
+  padding:clamp(38px,5.3vw,75px) clamp(25px,5.2vw,78px) clamp(31px,4.2vw,55px);
+  max-width:850px;
+  width:100%;
+  position:relative;
+  z-index:1;
+}
+.landing-places h2{max-width:680px}
+.landing-places .places-verse{max-width:590px}
+.landing-places .places-home-countries{
+  width:calc(100% - clamp(52px,12vw,155px));
+  max-width:1050px;
+  margin:0 auto;
+  padding:0;
+  gap:clamp(12px,1.6vw,20px);
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  position:relative;
+  z-index:2;
+}
+.landing-places .places-home-countries a{
+  min-height:clamp(145px,15vw,183px);
+  padding:clamp(15px,1.9vw,24px);
+  border:1px solid rgba(242,187,111,.8);
+  background:linear-gradient(100deg,rgba(58,7,23,.75),rgba(89,14,32,.41));
+  box-shadow:0 6px 22px rgba(22,2,11,.12);
+  overflow:hidden;
+  isolation:isolate;
+}
+.landing-places .places-home-countries a::before{
+  opacity:1;
+  background-repeat:no-repeat;
+  background-position:right bottom;
+  background-size:auto 105%;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.35) 19%,#000 42%);
+  mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.35) 19%,#000 42%);
+}
+.landing-places .places-home-countries a[href$="#italia"]::before{
+  background-image:url("assets/itaca-luoghi-italia-approved.webp");
+  background-position:right -4px bottom -1px;
+  background-size:auto 110%;
+}
+.landing-places .places-home-countries a[href$="#francia"]::before{
+  background-image:url("assets/itaca-luoghi-francia-approved.webp");
+  background-position:right 4px bottom -2px;
+  background-size:auto 114%;
+}
+.landing-places .places-home-countries a[href$="#polonia"]::before{
+  background-image:url("assets/itaca-luoghi-polonia-approved.webp");
+  background-position:right 1px bottom -3px;
+  background-size:auto 112%;
+}
+.landing-places .places-home-countries a[href$="#irlanda"]::before{
+  background-image:url("assets/itaca-luoghi-irlanda-approved.webp");
+  background-position:right 4px bottom -2px;
+  background-size:auto 111%;
+}
+.landing-places .places-home-countries .places-country-name,
+.landing-places .places-home-countries small,
+.landing-places .places-home-countries a > span{
+  text-shadow:0 2px 9px rgba(34,3,14,.8);
+}
+.places-country-top::before{opacity:.47}
+#italia .places-country-top::before{background-image:url("assets/itaca-luoghi-italia-approved.webp");background-size:auto 155%}
+#francia .places-country-top::before{background-image:url("assets/itaca-luoghi-francia-approved.webp");background-size:auto 155%}
+#polonia .places-country-top::before{background-image:url("assets/itaca-luoghi-polonia-approved.webp");background-size:auto 160%}
+#irlanda .places-country-top::before{background-image:url("assets/itaca-luoghi-irlanda-approved.webp");background-size:auto 155%}
+/* Wide desktop: text upper left, Mole upper right, the four countries below. */
+@media(min-width:901px){
+  .landing-places{grid-template-columns:minmax(0,1fr)}
+  .landing-places .landing-places-copy{max-width:min(75%,850px)}
+  .landing-places .places-mole-art{
+    background-size:min(68%,790px) auto;
+    background-position:right top;
+    opacity:.98;
+  }
+}
+/* Tablet and portrait phones: keep the landscape behind copy, cards in 2 x 2. */
+@media(max-width:900px){
+  .landing-places{grid-template-columns:minmax(0,1fr);margin-top:6px;padding-bottom:103px}
+  .landing-places .landing-places-copy{padding:35px 29px 28px;max-width:100%}
+  .landing-places .places-mole-art{
+    background-position:right top;
+    background-size:85% auto;
+    opacity:.81;
+  }
+  .landing-places .places-home-countries{
+    padding:0;
+    width:calc(100% - 58px);
+    margin:0 auto;
+    gap:12px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .landing-places .places-home-countries a{min-height:133px;padding:16px}
+}
+@media(max-width:700px){
+  .landing-places{grid-template-columns:1fr;margin-top:0;padding-bottom:88px}
+  .landing-places .landing-places-copy{padding:34px 24px 24px}
+  .landing-places h2{font-size:clamp(37px,8.1vw,55px);line-height:1.08}
+  .landing-places .places-verse{font-size:clamp(19px,4.6vw,24px);line-height:1.34}
+  .landing-places .places-mole-art{
+    background-position:right -15px top 0;
+    background-size:115% auto;
+    opacity:.66;
+    -webkit-mask-image:linear-gradient(to right,transparent 20%,rgba(0,0,0,.27) 45%,#000 82%);
+    mask-image:linear-gradient(to right,transparent 20%,rgba(0,0,0,.27) 45%,#000 82%);
+  }
+  .landing-places .places-home-countries{
+    width:calc(100% - 44px);
+    padding:0;
+    margin:0 auto;
+    gap:10px;
+  }
+  .landing-places .places-home-countries a{min-height:119px;padding:14px 13px;font-size:clamp(21px,5.7vw,27px)}
+  .landing-places .places-home-countries a::before{
+    background-size:auto 105%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 35%);
+    mask-image:linear-gradient(to right,transparent 0%,#000 35%);
+  }
+  .landing-places .places-home-countries small{font-size:10px}
+}
+@media(max-width:380px) and (orientation:portrait){
+  .landing-places .landing-places-copy{padding:28px 18px 20px}
+  .landing-places .places-home-countries{width:calc(100% - 34px)}
+  .landing-places .places-home-countries a{padding:12px 10px;min-height:108px}
+}
+/* Landscape smartphone: avoid narrow columns; readable text and landmark cards. */
+@media(orientation:landscape) and (max-height:600px) and (min-width:701px) and (max-width:1200px){
+  .landing-places{grid-template-columns:1fr;margin-top:0;padding-bottom:89px}
+  .landing-places .landing-places-copy{padding:32px 34px 22px;max-width:65%}
+  .landing-places h2{font-size:clamp(35px,5vw,52px)}
+  .landing-places .places-verse{font-size:clamp(18px,2.4vw,23px)}
+  .landing-places .places-mole-art{background-size:71% auto;background-position:right top;opacity:.83}
+  .landing-places .places-home-countries{width:calc(100% - 68px);margin:0 auto;padding:0;gap:12px}
+  .landing-places .places-home-countries a{min-height:130px;padding:15px}
+}
