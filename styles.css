@@ -868,3 +868,50 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
   .landing-places .places-home-countries{width:calc(100% - 68px);margin:0 auto;padding:0;gap:12px}
   .landing-places .places-home-countries a{min-height:130px;padding:15px}
 }
+
+
+/* The exact approved 1024x1536 image, displayed whole and without effects. */
+.places-exact-image{
+  grid-column:1/-1;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  height:auto;
+  margin:42px auto 0;
+  position:relative;
+  overflow:hidden;
+  background:#3f0717;
+  isolation:isolate;
+  line-height:0;
+}
+.places-exact-image .places-exact-photo{
+  display:block;width:100%;max-width:100%;height:auto;
+  aspect-ratio:2/3;object-fit:contain;object-position:center;
+  padding:0;margin:0;border:0;opacity:1;filter:none;
+}
+.places-screenreader{
+  position:absolute!important;
+  width:1px!important;height:1px!important;margin:-1px!important;
+  padding:0!important;border:0!important;
+  overflow:hidden!important;clip-path:inset(50%)!important;
+  white-space:nowrap!important;
+}
+.places-exact-linkmap{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+}
+.places-exact-hotspot{
+  position:absolute;display:block;pointer-events:auto;background:transparent;
+  outline:0;border-radius:2px;
+}
+.places-exact-hotspot:hover{background:rgba(250,213,146,.055)}
+.places-exact-hotspot:focus-visible{
+  background:rgba(250,213,146,.12);outline:3px solid #FAD592;outline-offset:-3px;
+}
+.places-exact-cta{left:7.4%;top:35.2%;width:41%;height:5.1%}
+.places-exact-it{left:4.85%;top:44.9%;width:43.95%;height:17.5%}
+.places-exact-fr{left:51.25%;top:44.9%;width:43.95%;height:17.5%}
+.places-exact-pl{left:4.85%;top:63.9%;width:43.95%;height:17.5%}
+.places-exact-ie{left:51.25%;top:63.9%;width:43.95%;height:17.5%}
+@media(max-width:900px){.places-exact-image{margin-top:6px}}
+@media(max-width:700px) and (orientation:portrait){.places-exact-image{margin-top:0}}
+@media(orientation:landscape) and (max-height:600px) and (max-width:1200px){.places-exact-image{margin-top:0}}
