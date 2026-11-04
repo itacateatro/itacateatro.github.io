@@ -1238,25 +1238,29 @@ body[data-page="luoghi"] #germania .places-country-top::before{
 }
 
 
-/* Intonaco crema chiaro: texture discretissima estesa alle pagine. */
-:root{--cream:#f6f1e8}
-body,.site-header,.site-footer,.landing-sections,.page-heading,.page-content,
+/* Intonaco color crema: parete calda con lievi ondulazioni, granulosità e piccole imperfezioni. */
+:root{--cream:#eee1ce;--cream-wall:#eee1ce}
+html,body,.site-header,.site-footer,.landing-sections,.page-heading,.page-content,
 .itaca-detail-page,.itaca-shows-page,.places-page-content{
-  background-color:#f6f1e8;
-  background-image:url("assets/itaca-intonaco-crema.webp");
-  background-position:left top;background-repeat:repeat;background-size:640px 640px;
+  background-color:var(--cream-wall);
+  background-image:url("assets/itaca-intonaco-crema-materico.svg");
+  background-position:left top;
+  background-repeat:repeat;
+  background-size:800px 800px;
 }
 .main-nav.open,.submenu,.mobile-menu-btn{
-  background-color:#f8f3eb;
-  background-image:url("assets/itaca-intonaco-crema.webp");
-  background-repeat:repeat;background-size:640px 640px;
+  background-color:var(--cream-wall);
+  background-image:url("assets/itaca-intonaco-crema-materico.svg");
+  background-position:left top;
+  background-repeat:repeat;
+  background-size:800px 800px;
 }
 /* Panorama ottenuto esclusivamente dalla fotografia inviata dall'utente:
    versione orizzontale con margini fotografici sfumati su desktop,
    stessa fotografia originale su telefono, guglia interamente visibile. */
 .places-twilight{
   background:linear-gradient(to bottom,
-    #f6f1e8 0%,#f6f1e8 4%,#f1ded8 15%,#d7a29b 33%,
+    #eee1ce 0%,#eee1ce 4%,#e8d4c8 15%,#d7a29b 33%,
     #b15f70 54%,#85233f 71%,#620d28 86%,#570a23 100%);
 }
 .places-skyline-stage{
