@@ -1286,3 +1286,24 @@ body,.site-header,.site-footer,.landing-sections,.page-heading,.page-content,
   }
   .places-twilight .places-twilight-inner{margin-top:0;padding:32px 6% 0}
 }
+
+
+/* Rifinitura definitiva della fotografia fornita: la punta resta sempre nitida.
+   Lo sfumato è soltanto alla base, mai sul cielo o sulla stella. */
+.places-skyline-stage .places-panorama{
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 86%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 86%,transparent 100%);
+}
+.places-twilight .places-twilight-inner{
+  margin-top:0;
+  padding-top:clamp(58px,5.2vw,84px);
+}
+@media(max-width:699px){
+  .places-skyline-stage .places-panorama{
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%);
+  }
+  .places-twilight .places-twilight-inner{
+    margin-top:0;padding-top:46px;
+  }
+}
