@@ -915,3 +915,139 @@ body[data-page="scuola"] .feature-grid{grid-template-columns:repeat(2,minmax(0,1
 @media(max-width:900px){.places-exact-image{margin-top:6px}}
 @media(max-width:700px) and (orientation:portrait){.places-exact-image{margin-top:0}}
 @media(orientation:landscape) and (max-height:600px) and (max-width:1200px){.places-exact-image{margin-top:0}}
+
+
+/* ITACA / I luoghi — panorama torinese orizzontale: dal bianco al rosso del tramonto.
+   Rimpiazza il vecchio manifesto verticale della Home con contenuto HTML navigabile. */
+body[data-page="index"] .landing-inner{padding-bottom:clamp(24px,3.5vw,55px)}
+.places-twilight{
+  position:relative;isolation:isolate;overflow:hidden;
+  width:100%;padding:0 0 clamp(58px,5vw,86px);
+  color:#fff6eb;
+  background:linear-gradient(to bottom,
+    #fcfaf6 0%,#fcfaf6 6%,#f9f0e8 15%,#efcfc0 29%,
+    #d89e8f 43%,#b65e63 55%,#8e2542 70%,#650f29 85%,#5a0c23 100%);
+}
+.places-twilight::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 51% 41% at 52% 34%,rgba(255,224,187,.45),transparent 78%),
+             radial-gradient(ellipse 55% 45% at 90% 70%,rgba(94,0,35,.24),transparent 85%);
+}
+.places-skyline-stage{
+  position:relative;width:100%;max-width:1700px;
+  height:clamp(246px,25vw,362px);
+  margin:0 auto;overflow:hidden;
+}
+.places-alps{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:fill;object-position:center bottom;
+  opacity:.96;pointer-events:none;
+}
+.places-mole{
+  position:absolute;z-index:1;left:50%;bottom:-9px;
+  transform:translateX(-50%);
+  width:clamp(214px,24vw,320px);
+  height:clamp(265px,28vw,355px);
+  object-fit:contain;object-position:center bottom;
+  pointer-events:none;filter:drop-shadow(0 8px 15px rgba(85,13,31,.12));
+}
+.places-twilight-inner{
+  position:relative;z-index:2;max-width:1390px;
+  margin:0 auto;padding:0 clamp(22px,5.3vw,90px);
+  text-align:center;
+}
+.places-twilight h2{
+  margin:0;color:#fff1dd;
+  font:400 clamp(44px,4.7vw,67px)/1.06 var(--serif);
+  letter-spacing:-.045em;text-wrap:balance;
+  text-shadow:0 2px 21px rgba(49,4,20,.16);
+}
+.places-twilight-inner>p{
+  margin:10px auto 0;
+  font:italic 400 clamp(18px,1.85vw,25px)/1.4 var(--serif);
+  color:#fce5cc;letter-spacing:.006em;
+}
+.places-twilight-countries{
+  display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:clamp(9px,1.3vw,18px);
+  max-width:1190px;margin:37px auto 0;
+}
+.places-twilight-card{
+  position:relative;isolation:isolate;overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center;
+  min-width:0;min-height:137px;padding:19px 12px;
+  background:linear-gradient(145deg,rgba(51,5,27,.19),rgba(55,9,26,.08));
+  border:1px solid rgba(237,187,132,.40);
+  color:#fff0df;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.places-twilight-card::before{
+  content:"";position:absolute;inset:5px 0 12px;z-index:-1;
+  background-position:center 34%;background-repeat:no-repeat;background-size:auto 115%;
+  opacity:.49;filter:saturate(.65);transition:opacity .2s,transform .25s;
+}
+.places-twilight-card::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(0deg,rgba(71,11,33,.73),transparent 73%);
+}
+.places-twilight-card:hover,.places-twilight-card:focus-visible{
+  border-color:#f3cf9e;background:rgba(130,39,51,.22);transform:translateY(-3px);
+}
+.places-twilight-card:hover::before{opacity:.7;transform:scale(1.04)}
+.places-twilight-card-name{
+  position:relative;font:400 clamp(22px,2.25vw,31px)/1.1 var(--serif);
+  letter-spacing:-.025em;text-shadow:0 2px 10px #4c0928;
+}
+.places-twilight-italia::before{background-image:url("assets/itaca-luoghi-italia-approved.webp")}
+.places-twilight-francia::before{background-image:url("assets/itaca-luoghi-francia-approved.webp")}
+.places-twilight-polonia::before{background-image:url("assets/itaca-luoghi-polonia-approved.webp")}
+.places-twilight-spagna::before{background-image:url("assets/spagna-monumento-dorato.svg")}
+.places-twilight-irlanda::before{background-image:url("assets/itaca-luoghi-irlanda-approved.webp")}
+/* Pagina dei paesi: solo titolo, sottotitolo e schede; niente note provvisorie. */
+body[data-page="luoghi"] .places-page-heading{min-height:225px;padding:55px 0 47px}
+body[data-page="luoghi"] .places-page-heading::after{display:none}
+body[data-page="luoghi"] .places-page-heading h1{margin-top:0;font-size:clamp(43px,5.4vw,75px)}
+body[data-page="luoghi"] .places-page-poem{
+  margin-top:16px;color:#61443b;
+  font:italic 400 clamp(19px,2vw,25px)/1.35 var(--serif)
+}
+body[data-page="luoghi"] .places-page-content{padding-top:49px}
+body[data-page="luoghi"] .places-country-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+body[data-page="luoghi"] .places-country{overflow:hidden}
+body[data-page="luoghi"] .places-country-top{
+  min-height:174px;padding:22px 25px;
+  background:linear-gradient(120deg,#68102a,#8c1b39 65%,#ae5553)
+}
+body[data-page="luoghi"] .places-country-top h2{
+  font:400 clamp(33px,3.5vw,49px)/1.04 var(--serif);
+  position:relative;z-index:2;color:#fff3e2;letter-spacing:-.04em;
+}
+#spagna .places-country-top::before{
+  background-image:url("assets/spagna-monumento-dorato.svg");
+  background-size:auto 150%;opacity:.52;
+}
+@media(max-width:900px){
+  .places-skyline-stage{height:clamp(210px,34vw,300px)}
+  .places-mole{height:clamp(240px,38vw,305px);width:clamp(195px,31vw,280px)}
+  .places-twilight-countries{grid-template-columns:repeat(3,minmax(0,1fr));max-width:670px}
+  body[data-page="luoghi"] .places-country-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  body[data-page="index"] .landing-inner{padding-bottom:18px}
+  .places-skyline-stage{height:205px}
+  .places-alps{width:165%;max-width:none;left:-32.5%;object-fit:fill}
+  .places-mole{height:227px;width:185px;bottom:-6px}
+  .places-twilight{padding-bottom:56px;background:linear-gradient(to bottom,
+    #fcfaf6 0%,#fcfaf6 6%,#f3dfd5 21%,#cf8f85 43%,
+    #9b3650 66%,#640d29 86%,#5a0c23 100%)}
+  .places-twilight-inner{padding:0 6%}
+  .places-twilight h2{font-size:clamp(38px,9vw,52px)}
+  .places-twilight-inner>p{font-size:clamp(17px,4.4vw,21px)}
+  .places-twilight-countries{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:26px}
+  .places-twilight-card{min-height:118px;padding:13px}
+  .places-twilight-card-name{font-size:clamp(24px,6vw,29px)}
+  .places-twilight-irlanda{grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}
+  body[data-page="luoghi"] .places-page-heading{padding:43px 0 38px;min-height:0}
+  body[data-page="luoghi"] .places-country-grid{grid-template-columns:1fr}
+  body[data-page="luoghi"] .places-country-top{min-height:148px}
+}
