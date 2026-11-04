@@ -1311,3 +1311,60 @@ html,body,.site-header,.site-footer,.landing-sections,.page-heading,.page-conten
     margin-top:0;padding-top:46px;
   }
 }
+
+
+/* 2026-11-04 — Intonaco unico, senza le righe delle vecchie mattonelle SVG.
+   Il disegno di grana è cucito sui bordi e appare una sola volta sul fondo
+   dell'intero documento, non ricomincia da capo nelle singole sezioni. */
+:root{
+  --cream:#eee1ce;
+  --cream-wall:#eee1ce;
+}
+html{
+  background-color:var(--cream-wall);
+  background-image:url("assets/itaca-intonaco-crema-continuo.svg");
+  background-position:0 0;
+  background-repeat:repeat;
+  background-size:512px 512px;
+  background-attachment:fixed;
+}
+/* Le superfici grandi sono trasparenti e condividono la stessa parete;
+   lasciamo intenzionalmente autonomi i box, le immagini e il tramonto. */
+body,
+.site-header,
+.site-footer,
+.landing-sections,
+.page-heading,
+.page-content,
+.itaca-detail-page,
+.itaca-shows-page,
+.places-page-content{
+  background-color:transparent!important;
+  background-image:none!important;
+}
+.main-nav.open,
+.submenu,
+.mobile-menu-btn{
+  background-color:var(--cream-wall);
+  background-image:none;
+}
+/* La zona bianca incorporata nel logo si fonde con l'intonaco sottostante.
+   Maschere dolci sul margine destro e sul bordo inferiore: nessuno stacco netto. */
+.site-header .brand{
+  isolation:auto;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+}
+.site-header .brand img{
+  mix-blend-mode:multiply;
+  -webkit-mask-image:linear-gradient(to right,#000 0%,#000 75%,transparent 100%);
+  mask-image:linear-gradient(to right,#000 0%,#000 75%,transparent 100%);
+}
+/* Si applica ugualmente a desktop, smartphone verticale e orizzontale. */
+@media(max-width:900px){
+  html{background-attachment:scroll}
+  .site-header .brand{
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 75%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 75%,transparent 100%);
+  }
+}
