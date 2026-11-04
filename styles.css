@@ -1091,8 +1091,8 @@ body[data-page="luoghi"] .places-country-top h2{
 .places-twilight-italia::before{background-image:url("assets/italia-tramonto-foto.webp")}
 .places-twilight-francia::before{background-image:url("assets/francia-tramonto-foto.webp")}
 .places-twilight-polonia::before{
-  background-image:url("assets/basilica-santa-maria-cracovia-detailed.webp");
-  background-position:center 42%;opacity:.86;
+  background-image:url("assets/polonia-tramonto-foto.webp");
+  background-position:center 42%;opacity:.92;
 }
 .places-twilight-spagna::before{background-image:url("assets/spagna-tramonto-foto.webp")}
 .places-twilight-irlanda::before{background-image:url("assets/irlanda-tramonto-foto.webp")}
@@ -1116,7 +1116,7 @@ body[data-page="luoghi"] .places-country-top .places-country-number{z-index:2;co
 body[data-page="luoghi"] #italia .places-country-top::before{background-image:url("assets/italia-tramonto-foto.webp")}
 body[data-page="luoghi"] #francia .places-country-top::before{background-image:url("assets/francia-tramonto-foto.webp")}
 body[data-page="luoghi"] #polonia .places-country-top::before{
-  background-image:url("assets/basilica-santa-maria-cracovia-detailed.webp");
+  background-image:url("assets/polonia-tramonto-foto.webp");
   background-position:center 40%;
 }
 body[data-page="luoghi"] #spagna .places-country-top::before{background-image:url("assets/spagna-tramonto-foto.webp")}
