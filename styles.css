@@ -1051,3 +1051,84 @@ body[data-page="luoghi"] .places-country-top h2{
   body[data-page="luoghi"] .places-country-grid{grid-template-columns:1fr}
   body[data-page="luoghi"] .places-country-top{min-height:148px}
 }
+
+/* ITACA / 2026-11-04: fotografia panoramica di Torino al tramonto.
+   La Mole resta al centro; palazzi storici e Alpi occupano l'intera prospettiva. */
+.places-twilight{
+  background:linear-gradient(to bottom,
+    #fcfaf6 0%,#fcfaf6 5%,#f4e4db 13%,#e4b9a8 24%,
+    #ca918a 36%,#a94d62 55%,#84203e 69%,#620d28 86%,#570a23 100%);
+}
+.places-skyline-stage{
+  max-width:1750px;
+  height:clamp(285px,28vw,460px);
+}
+.places-skyline-stage .places-panorama{
+  position:absolute;inset:0;display:block;
+  width:100%;height:100%;max-width:none;
+  object-fit:cover;object-position:center 50%;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 83%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 83%,transparent 100%);
+}
+.places-twilight-inner{margin-top:-7px}
+.places-twilight-countries{margin-top:35px}
+.places-twilight-card{
+  min-height:154px;align-items:flex-end;
+  background:rgba(45,7,26,.23);
+  border:1px solid rgba(242,197,140,.56);
+}
+.places-twilight-card::before{
+  inset:0;opacity:.92;filter:none;
+  background-position:center center;background-size:cover;
+}
+.places-twilight-card::after{
+  background:linear-gradient(to top,rgba(62,5,26,.95) 0%,rgba(65,8,33,.42) 32%,transparent 89%);
+}
+.places-twilight-card-name{
+  color:#fff7ed;text-shadow:0 2px 11px rgba(36,6,16,.90);
+}
+.places-twilight-italia::before{background-image:url("assets/italia-tramonto-foto.webp")}
+.places-twilight-francia::before{background-image:url("assets/francia-tramonto-foto.webp")}
+.places-twilight-polonia::before{
+  background-image:url("assets/basilica-santa-maria-cracovia-detailed.webp");
+  background-position:center 42%;opacity:.86;
+}
+.places-twilight-spagna::before{background-image:url("assets/spagna-tramonto-foto.webp")}
+.places-twilight-irlanda::before{background-image:url("assets/irlanda-tramonto-foto.webp")}
+/* La stessa impostazione fotografica sulle cinque sezioni interne. */
+body[data-page="luoghi"] .places-country-top{
+  isolation:isolate;min-height:195px;
+  background:linear-gradient(125deg,#6b102d,#9c3854);
+}
+body[data-page="luoghi"] .places-country-top::before{
+  inset:0;z-index:0;opacity:.87;
+  background-position:center 45%;background-size:cover;
+}
+body[data-page="luoghi"] .places-country-top::after{
+  content:"";position:absolute;inset:0;z-index:1;width:auto;height:auto;
+  border:0;border-radius:0;
+  background:linear-gradient(180deg,rgba(42,5,18,.37),transparent 39%,rgba(56,7,25,.75));
+  pointer-events:none;
+}
+body[data-page="luoghi"] .places-country-top h2{z-index:2}
+body[data-page="luoghi"] .places-country-top .places-country-number{z-index:2;color:#fff5e3}
+body[data-page="luoghi"] #italia .places-country-top::before{background-image:url("assets/italia-tramonto-foto.webp")}
+body[data-page="luoghi"] #francia .places-country-top::before{background-image:url("assets/francia-tramonto-foto.webp")}
+body[data-page="luoghi"] #polonia .places-country-top::before{
+  background-image:url("assets/basilica-santa-maria-cracovia-detailed.webp");
+  background-position:center 40%;
+}
+body[data-page="luoghi"] #spagna .places-country-top::before{background-image:url("assets/spagna-tramonto-foto.webp")}
+body[data-page="luoghi"] #irlanda .places-country-top::before{background-image:url("assets/irlanda-tramonto-foto.webp")}
+@media(max-width:900px){
+  .places-skyline-stage{height:clamp(250px,36vw,390px)}
+  .places-twilight-card{min-height:147px}
+}
+@media(max-width:600px){
+  .places-skyline-stage{height:270px}
+  .places-skyline-stage .places-panorama{object-position:center}
+  .places-twilight-inner{margin-top:-2px}
+  .places-twilight-card{min-height:134px}
+  body[data-page="luoghi"] .places-country-top{min-height:174px}
+}
