@@ -16,6 +16,21 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"PerformingGroup","@id":"https://itacateatro.github.io/#compagnia","name":"ITACA Associazione Teatrale","url":"https://itacateatro.github.io/","logo":"https://itacateatro.github.io/assets/logo-itaca-ufficiale.webp","description":"ITACA Associazione Teatrale, fondata a Torino e diretta da Marco Alotto: spettacoli, ricerca teatrale, formazione attoriale e progetti culturali.","address":{"@type":"PostalAddress","streetAddress":"Via Cibrario 39","addressLocality":"Torino","addressCountry":"IT"}}</script>
   <link rel="stylesheet" href="styles.css?v=kavafis-senza-righe-20261106" />
   <link rel="stylesheet" href="itaca-atelier-v3.css?v=20261105-riferimento2" />
+  <style>
+    /* Kavafis: ripristino righe e carattere più piccolo — 2026-11-06 */
+    body[data-page="index"] main > .landing-quote-kavafis {
+      border-top: 1px solid #d3c1ab;
+      border-bottom: 1px solid #e3d6c4;
+    }
+    body[data-page="index"] main > .landing-quote-kavafis blockquote {
+      font-size: clamp(23px, 2.4vw, 35px);
+    }
+    @media (max-width:600px) {
+      body[data-page="index"] main > .landing-quote-kavafis blockquote {
+        font-size: clamp(22px, 5.4vw, 30px);
+      }
+    }
+  </style>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 </head>
 <body data-page="index">
