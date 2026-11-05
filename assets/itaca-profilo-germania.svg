@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="460" viewBox="0 0 620 460" fill="none" aria-hidden="true">
+<g stroke="#493440" stroke-linejoin="round" stroke-linecap="round">
+<path d="M26 444H596" stroke-width="5"/>
+<path d="M59 402H558V438H59Z" fill="#997c88" fill-opacity=".36" stroke-width="3"/>
+<path d="M83 210H536V251H83Z" fill="#755968" fill-opacity=".55" stroke-width="4"/>
+<path d="M104 177H516L532 207H87Z" fill="#a08a90" fill-opacity=".38" stroke-width="4"/>
+<path d="M95 164H524V181H95Z" fill="#6f5262" fill-opacity=".6" stroke-width="3"/>
+<path d="M120 250V402M202 250V402M284 250V402M366 250V402M448 250V402M511 250V402" stroke-width="17"/>
+<path d="M109 250H131M191 250H213M273 250H295M355 250H377M437 250H459M500 250H522M108 391H134M190 391H216M272 391H298M354 391H380M436 391H462M499 391H523" stroke-width="5"/>
+<path d="M145 399V270M227 399V270M309 399V270M391 399V270M473 399V270" stroke="#775969" stroke-width="1.9" opacity=".7"/>
+<path d="M96 225H522M96 238H522M102 167H517" stroke-width="2" opacity=".72"/>
+<g stroke-width="2.2" opacity=".86">
+<path d="M105 186 v13 m-8 -7 h15"/><path d="M125 186 v13 m-8 -7 h15"/><path d="M145 186 v13 m-8 -7 h15"/><path d="M165 186 v13 m-8 -7 h15"/><path d="M185 186 v13 m-8 -7 h15"/><path d="M205 186 v13 m-8 -7 h15"/><path d="M225 186 v13 m-8 -7 h15"/><path d="M245 186 v13 m-8 -7 h15"/><path d="M265 186 v13 m-8 -7 h15"/><path d="M285 186 v13 m-8 -7 h15"/><path d="M305 186 v13 m-8 -7 h15"/><path d="M325 186 v13 m-8 -7 h15"/><path d="M345 186 v13 m-8 -7 h15"/><path d="M365 186 v13 m-8 -7 h15"/><path d="M385 186 v13 m-8 -7 h15"/><path d="M405 186 v13 m-8 -7 h15"/><path d="M425 186 v13 m-8 -7 h15"/><path d="M445 186 v13 m-8 -7 h15"/><path d="M465 186 v13 m-8 -7 h15"/><path d="M485 186 v13 m-8 -7 h15"/><path d="M505 186 v13 m-8 -7 h15"/>
+</g>
+<!-- Quadriga: quattro cavalli, carro e Vittoria, contorni a china. -->
+<path d="M257 157L260 141 272 132 286 133 295 144 300 160M309 155L313 128 325 118 340 120 352 139 349 155M358 154L362 129 377 117 390 125 397 145 395 161" stroke-width="4"/>
+<path d="M250 139L241 134 237 124 242 119 255 128M280 133L283 117 296 117 299 128M321 119L319 108 329 103 338 115M378 121L378 109 390 105 395 120" stroke-width="3"/>
+<path d="M261 155L269 173M286 154L291 174M330 148L325 174M346 145L353 174M382 147L386 173M396 153L402 174" stroke-width="3"/>
+<path d="M288 164Q311 144 350 160L348 173H290Z" fill="#765e69" fill-opacity=".4" stroke-width="3"/>
+<path d="M317 155L313 126 307 120 310 112 320 110 326 119 322 125 324 151" stroke-width="3"/>
+<path d="M311 110L302 96 307 88 316 98 324 87 331 98 323 112" fill="#705565" fill-opacity=".55" stroke-width="2.7"/>
+<path d="M315 88V65M312 70H319M307 63L315 55 323 63" stroke-width="2.6"/>
+</g>
+<g stroke="#5f4753" stroke-width="1.4" opacity=".74">
+<path d="M100 214v16"/><path d="M117 214v16"/><path d="M134 214v16"/><path d="M151 214v16"/><path d="M168 214v16"/><path d="M185 214v16"/><path d="M202 214v16"/><path d="M219 214v16"/><path d="M236 214v16"/><path d="M253 214v16"/><path d="M270 214v16"/><path d="M287 214v16"/><path d="M304 214v16"/><path d="M321 214v16"/><path d="M338 214v16"/><path d="M355 214v16"/><path d="M372 214v16"/><path d="M389 214v16"/><path d="M406 214v16"/><path d="M423 214v16"/><path d="M440 214v16"/><path d="M457 214v16"/><path d="M474 214v16"/><path d="M491 214v16"/><path d="M508 214v16"/>
+</g>
+</svg>
