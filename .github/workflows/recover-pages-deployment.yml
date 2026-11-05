@@ -12,13 +12,13 @@ jobs:
   recover:
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel stale Pages deployment from 2026-11-05
+      - name: Cancel the blocking Pages deployment from 2026-11-05
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
         run: |
           set -euo pipefail
-          endpoint="https://api.github.com/repos/${REPOSITORY}/pages/deployments/19e5fc723b0335697360b07877af804af12ca8ae/cancel"
+          endpoint="https://api.github.com/repos/${REPOSITORY}/pages/deployments/6caf7acc7148f474dd55da7d2204b571d443aba6/cancel"
           code=$(curl --silent --show-error --output /tmp/pages-cancel.json --write-out '%{http_code}' \
             -X POST \
             -H "Accept: application/vnd.github+json" \
