@@ -1795,7 +1795,10 @@ body[data-page="index"] .home-introduction-copy{
 }
 body[data-page="index"] .home-introduction-copy h1{
   display:inline;
-  font:600 inherit;
+  font-family:inherit;
+  font-size:inherit;
+  line-height:inherit;
+  font-style:normal;
   font-weight:600;
   color:#a10c2b;
   letter-spacing:-.028em;
